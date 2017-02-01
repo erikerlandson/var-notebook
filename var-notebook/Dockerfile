@@ -12,6 +12,8 @@ USER $NB_UID
 
 ADD var.ipynb /notebooks/var.ipynb
 ADD wikieod.parquet /data/wikieod.parquet
+COPY metrics.properties /usr/local/spark/conf/
+COPY spark-defaults.conf /usr/local/spark/conf/
 
 USER root
 

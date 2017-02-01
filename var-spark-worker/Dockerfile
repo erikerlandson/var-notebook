@@ -10,6 +10,9 @@ RUN mkdir -p /data
 ADD wikieod.parquet /data/wikieod.parquet
 RUN chmod -R 1777 /data
 
+ENV SPARK_WORKER_CORES 1
+ENV SPARK_WORKER_MEMORY 1g
+
 USER 185
 
 CMD ["scl", "enable", "rh-python35", "/opt/spark/bin/launch.sh"]
